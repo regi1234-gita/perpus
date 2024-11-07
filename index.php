@@ -82,8 +82,9 @@
                         }
                     ?>
                     <a href="?page=peminjam" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Peminjam</a>
+                    <a href="?page=pengembalian" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Pengembalian</a>
                     <a href="?page=ulasan" class="nav-item nav-link"><i class="fa fa-comments me-2"></i>Ulasan</a>
-                    <a href="?page=laporan" class="nav-item nav-link"><i class="fa fa-comments me-2"></i>laporan</a>
+                    <a href="?page=laporan" class="nav-item nav-link"><i class="fa fa-comments me-2"></i>Laporan</a>
                     </div>
                 </div>
             </nav>

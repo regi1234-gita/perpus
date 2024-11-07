@@ -1,7 +1,7 @@
 <div class="card bg-dark d-flex justify-content-center align-items-center" >
 <div class="col-11">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Responsive Table</h6>
+                            <h6 class="mb-4">Table Kategori</h6>
                             <div class="table-responsive">
                             <a href="?page=fungsi/tambah_kategori" class="btn cur-p btn-primary">Add</a>
                             <br>
