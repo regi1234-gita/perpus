@@ -9,7 +9,7 @@
                                     $id_user = $_SESSION['user']['id_user'];
                                     $tanggal_pengembalian = $_POST['tanggal_pengembalian'];
                                     $status_pengembalian = $_POST['status_pengembalian'];
-                                    $query = mysqli_query($koneksi, "INSERT INTO peminjaman(id_buku, id_user, tanggal_pengembalian, status_peminjaman) VALUES('$id_buku', '$id_user', '$tanggal_peminjaman', '$tanggal_pengembalian', '$status_peminjaman')");
+                                    $query = mysqli_query($koneksi, "INSERT INTO peminjaman(id_buku, id_user, tanggal_pengembalian, status_pengembalian) VALUES('$id_buku', '$id_user', '$tanggal_peminjaman', '$tanggal_pengembalian', '$status_peminjaman')");
 
                                     if ($query) {
                                         echo '<script>alert("Berhasil ditambahkan.");</script>';
@@ -41,9 +41,9 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <div class="col-md-2">Status Peminjaman</div>
+                                <div class="col-md-2">Status Pengembalian</div>
                                 <div class="col-md-8">
-                                    <select name="status_peminjaman" class="form-control bg-white">
+                                    <select name="status_pengembalian" class="form-control bg-white">
                                         <option value="dipinjam">Dipinjam</option>
                                         <option value="dikembalikan">Dikembalikan</option>
                                     </select>
