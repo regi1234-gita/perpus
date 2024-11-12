@@ -14,7 +14,7 @@
                                              <th>User</th>
                                              <th>Buku</th>
                                              <th>Tanggal Pengembalian</th>
-                                             <th>Status Peminjaman</th>
+                                             <th>Status Pengembalian</th>
                                              <th>Aksi</th>
                                           </tr>
                                         </tr>

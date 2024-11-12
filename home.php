@@ -5,7 +5,7 @@
                             <i class="fa fa-chart-line fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total Kategori</p>
-                                <h6 class="mb-0">116</h6>
+                                <h6 class="mb-0">2</h6>
                             </div>
                         </div>
                     </div>
@@ -14,7 +14,7 @@
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total Buku</p>
-                                <h6 class="mb-0">51</h6>
+                                <h6 class="mb-0">2</h6>
                             </div>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                             <i class="fa fa-chart-area fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total Ulasan</p>
-                                <h6 class="mb-0">47</h6>
+                                <h6 class="mb-0">2</h6>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                             <i class="fa fa-chart-pie fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Total User</p>
-                                <h6 class="mb-0">110</h6>
+                                <h6 class="mb-0">2</h6>
                             </div>
                         </div>
                     </div>

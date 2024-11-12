@@ -8,8 +8,8 @@
                                     $id_buku = $_POST['id_buku'];
                                     $id_user = $_SESSION['user']['id_user'];
                                     $tanggal_pengembalian = $_POST['tanggal_pengembalian'];
-                                    $status_peminjaman = $_POST['status_peminjaman'];
-                                    $query = mysqli_query($koneksi, "INSERT INTO peminjaman(id_buku, id_user, tanggal_peminjaman, tanggal_pengembalian, status_peminjaman) VALUES('$id_buku', '$id_user', '$tanggal_peminjaman', '$tanggal_pengembalian', '$status_peminjaman')");
+                                    $status_pengembalian = $_POST['status_pengembalian'];
+                                    $query = mysqli_query($koneksi, "INSERT INTO peminjaman(id_buku, id_user, tanggal_pengembalian, status_peminjaman) VALUES('$id_buku', '$id_user', '$tanggal_peminjaman', '$tanggal_pengembalian', '$status_peminjaman')");
 
                                     if ($query) {
                                         echo '<script>alert("Berhasil ditambahkan.");</script>';
