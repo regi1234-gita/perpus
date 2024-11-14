@@ -1,53 +1,47 @@
-<div class="card bg-dark d-flex justify-content-center align-items-center" >
+<?php
+
+// Ambil data peminjaman yang masih dipinjam
+$sql = "SELECT p.id_peminjam, p.id_buku, b.judul, p.tanggal_peminjaman, p.tanggal_pengembalian
+        FROM peminjaman p
+        JOIN buku b ON p.id_buku = b.id_buku
+        WHERE p.status_peminjaman = 'dipinjam'";
+
+$result = $koneksi->query($sql);
+?>
+<div class="card bg-dark d-flex justify-content-center align-items-center">
+   <br>
 <div class="col-11">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Table Pengembalian</h6>
-                            <div class="table-responsive">
-                            <a href="?page=fungsi/tambah_peminjam" class="btn cur-p btn-primary">Add</a>
-                            <br>
-                            <br>
-                                <table class="table table-bordered table-striped">
-                                    <thead>
-                                        <tr>
-                                        <tr>
-                                             <th>No</th>
-                                             <th>User</th>
-                                             <th>Buku</th>
-                                             <th>Tanggal Pengembalian</th>
-                                             <th>Status Pengembalian</th>
-                                             <th>Aksi</th>
-                                          </tr>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php
-                                            $i =1;
-                                                $query = mysqli_query($koneksi, "SELECT * FROM peminjaman LEFT JOIN user on user.id_user = peminjaman.id_user LEFT JOIN buku on buku.id_buku = peminjaman.id_buku WHERE peminjaman.id_user=" . $_SESSION['user']['id_user']);
-                                                while($data = mysqli_fetch_array($query)) {
-                                                    ?> 
-                                        <tr>
-                                            <td><?php echo $i++; ?></td>
-                                            <td><?php echo $data['nama']; ?></td>
-                                            <td><?php echo $data['judul']; ?></td>
-                                            <td><?php echo $data['tanggal_pengembalian']; ?></td>
-                                            <td><?php echo $data['status_peminjaman']; ?></td>
-                                            <td>
-                                             <?php
-                                                if($data['status_peminjaman'] != 'dikembalikan') {
-                                                   ?>
-                                                <a class="btn cur-p btn-secondary" href="?page=fungsi/ubah_peminjam&&id=<?php echo $data['id_peminjam']; ?>">Change</a>
-                                                <a onclick="return confirm('apakah anda yakin?')" class="btn cur-p btn-danger" href="?page=fungsi/hapus_peminjam&&id=<?php echo $data['id_peminjam']; ?>">Delete</a>
-                                                <?php
-                                                   }
-                                                   ?>
-                                            </td>
-                                          </tr>
-                                          <?php
-                                                }
-                                                ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="bg-secondary rounded">
+   <div class="card-body">
+      <div class="row">
+         <div class="cold-md-12">
+            <form action="fungsi/pengembalian_buku.php" method="post">
+
+            <div class="row mb-3">
+               <div class="col-md-2">Buku yang dipinjam</div>
+               <div class="col-md-8"><select class="form-select bg-secondary " name="id_peminjam" id="id_peminjam">
+            <?php
+            while ($row = $result->fetch_assoc()) {
+               echo "<option value='".$row['id_peminjam']."'>".$row['judul']."</option>";
+            }
+            ?>
+        </select></div>
+         </div>
+         <div class="row mb-3">
+               <div class="col-md-2">Tanggal kembali</div>
+               <div class=" col-md-8"><input class="form-control bg-secondary" type="date" name="tanggal_kembali" required></div>
+         </div>
+         <div class="row"> 
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+               <button type="submit" class="btn btn-primary" name="submit" value="submit">Kembalikan buku</button>
+         </div>
+         </div>
+         </form>
+         </div>
+         </div>
+         </div>
+         </div>     
+<?php
+$koneksi->close();
+?>

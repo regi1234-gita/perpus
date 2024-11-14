@@ -1,4 +1,5 @@
 <div class="card bg-dark d-flex justify-content-center align-items-center" >
+</br>
 <div class="col-11">
                         <div class="bg-secondary rounded h-100 p-4">
                             <h6 class="mb-4">Table Ulasan</h6>

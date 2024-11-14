@@ -63,29 +63,35 @@
                     </div>
                     <div class="ms-3">
                         <h6 class="mb-0">GICA</h6>
-                        <span>Admin</span>
+                        <span>Online</span>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
+    
                     <a href="index.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                     <?php
-                        if($_SESSION['user']['level'] !='peminjaman'){
+                        if($_SESSION['user']['level'] !='peminjam'){
                     ?>
                         <a href="?page=kategori" class="nav-link "><i class="fa fa-th me-2"></i>Kategori</a>
-                    </div>
                     <a href="?page=buku" class="nav-item nav-link"><i class="fa fa-book me-2"></i>Buku</a>
                     <?php
                         }else{ 
                     ?>
-                    <?php
-                        }
-                    ?>
                     <a href="?page=peminjam" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Peminjam</a>
                     <a href="?page=pengembalian" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Pengembalian</a>
+                    <?php
+                    }
+                    ?>
                     <a href="?page=ulasan" class="nav-item nav-link"><i class="fa fa-comments me-2"></i>Ulasan</a>
+                    <?php
+                    if($_SESSION['user']['level'] !='peminjam'){
+                        ?>
                     <a href="?page=laporan" class="nav-item nav-link"><i class="fa fa-comments me-2"></i>Laporan</a>
-                    </div>
+                   <?php
+                    }
+                    ?>
+                </div>
                 </div>
             </nav>
         </div>

@@ -15,7 +15,6 @@
                                             <th scope="col">Penulis</th>
                                             <th scope="col">Penerbit</th>
                                             <th scope="col">Tahun Terbit</th>
-                                            <th scope="col">Deskripsi</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
@@ -32,7 +31,6 @@
                                             <td><?php echo $data['penulis']; ?></td>
                                             <td><?php echo $data['penerbit']; ?></td>
                                             <td><?php echo $data['tahun_terbit']; ?></td>
-                                            <td><?php echo $data['deskripsi']; ?></td>
                                             <td>
                                                 <a class="btn cur-p btn-secondary" href="?page=fungsi/ubah_buku&&id=<?php echo $data['id_buku']; ?>">Change</a>
                                                 <a onclick="return confirm('apakah anda yakin?')" class="btn cur-p btn-danger" href="?page=fungsi/hapus_buku&&id=<?php echo $data['id_buku']; ?>">Delete</a>
